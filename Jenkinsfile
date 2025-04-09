@@ -36,7 +36,7 @@ stages{
                 script {
                     sh 'sudo docker ps -a --filter "name=thib432" --format "{{.ID}}" |sudo  xargs -r docker stop'
                     sh 'sudo docker ps -a --filter "name=thib432" --format "{{.ID}}" |sudo  xargs -r docker rm' 
-                    sh 'docker run -d  -p 7777:80 --name thib432$LOCAL_TAG thib432/appjs:$LOCAL_TAG'
+                    sh 'docker run -d  -p 3000:80 --name thib432$LOCAL_TAG thib432/appjs:$LOCAL_TAG'
                 }
            
         }
